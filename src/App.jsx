@@ -5,8 +5,9 @@ import Container from "./Container";
 function App() {
   return (
     <>
-      <img src="./assets/bg-pattern-bottom.svg" alt="" className="bubbleBottom" />
-      <img src="./assets/bg-pattern-top.svg" alt="" className="bubbleTop" />
+      <div className="bubbleTop"></div>
+      <div className="bubbleBottom"></div>
+
       <Container />
       <Attribution />
     </>

@@ -3,18 +3,10 @@ import "./App.css";
 function Container() {
   return (
     <div className="container">
-      <img
-        src="./assets/bg-pattern-card.svg"
-        alt=""
-        className="bgImg"
-      />
-      
+      <div className="bgImg" ></div>
+
       <div className="top">
-        <img
-          className="profileImg"
-          src="./assets/image-victor.jpg"
-          alt="A profile picture of Victor"
-        />
+        <div className="profileImg"></div>
         <h1>
           Victor Crest <span>26</span>
         </h1>
