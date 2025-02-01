@@ -1,42 +1,146 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
+* {
+  font-family: "Kumbh Sans", monospace;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden !important;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #19a1ad;
+  font-size: 18px;
+  overflow: hidden !important;
+}
+
+.container {
+  color: black;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 374px;
+  gap: 20px;
+  border-radius: 30px;
+  position: relative;
+}
+
+.bgImg {
+  border-radius: 30px 30px 0 0;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  height: 140px;
+  width: 100%;
+}
+
+.container .top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  /* gap: 20px; */
+}
+
+.container .top .profileImg {
+  width: 96px;
+  /* margin-top: 92px; */
+  border-radius: 50px;
+  border: 6px solid white;
+  z-index: 2;
+  margin-bottom: 20px;
+}
+
+.container .top h1 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.container .top p {
+  margin-bottom: 10px;
+}
+
+.container .top h1 span,
+.container .top > p {
+  font-weight: 500;
+  color: #969696;
+}
+
+.container .top > p {
+  font-size: 14px;
+}
+
+hr {
+  border: 0.5px solid #e7e7e7;
+  width: 100%;
+}
+
+.popularity {
+  width: 100%;
+  display: flex;
   text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.popularity h2 {
+  font-size: 18px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.popularity p {
+  font-size: 11px;
+  color: #969696;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.attribution {
+  font-size: 10px;
+  color: black;
+}
+
+.bubbleBottom,
+.bubbleTop {
+  position: absolute;
+  z-index: 0;
+}
+
+.bubbleTop {
+  top: -500px;
+  left: -270px;
+}
+
+.bubbleBottom {
+  bottom: -600px;
+  right: -150px;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow: hidden;
   }
-  to {
-    transform: rotate(360deg);
+
+  .bubbleBottom,
+  .bubbleTop {
+    height: 500px;
+    overflow: hidden;
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .bubbleBottom {
+    bottom: -100px;
+    right: -250px;
   }
-}
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .bubbleTop {
+    top: -200px;
+    left: -200px;
+  }
 }
